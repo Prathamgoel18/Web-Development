@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 12px;
+        }
+    .box{
+        box-sizing: border-box;
+        border:2px solid black;
+        width: 100vw;
+        /* vw is like px but vw have an advantage over px that it have can adjust width whe the size of screen is incresed or decrased*/
+        margin:auto;
+        background-color: aquamarine;
+    }
+    .container{
+        box-sizing: border-box;
+        border:2px solid black;
+        width: 80vw;
+        /* vw is like px but vw have an advantage over px that it have can adjust width whe the size of screen is incresed or decrased*/
+        margin:23px auto;
+        /* Above margin is used to give difference between horizontal and vertical margin  */
+        /* Here 23px gives the margin between hrizontaland vertical and AUTO gives about the both sides margins */
+        background-color: aquamarine;
+        height: 20vh;
+        min-height: 100px;
+        min-width: none;
+        font-size: 18px;
+
+    }
+    .container p{
+        font-size:2em;
+        /* em is use when we have to do any multiple of alloted font size */
+        /* rem is used when we have to do any multiple of alloted font size of root element i.e HTML  */
+        font-size: 20rem;
+        /* Above rem will twice the size of alloted roo level root size */
+    }
+    .seccount{
+        background-color: red;
+        color:yellow;
+        font-size: 20px;
+        width:100vmin;
+        /* Vmin     and Vmax are used where we want that vh and vw changefom device to device according to the size of the screen */
+        /* which meas that forr mobile phones vmin will be vw and vmax will be vh and for PC'S vmin will be vh and vmax will be vw */
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, voluptas dolorem excepturi impedit maxime obcaecati velit aspernatur cum id facere nobis ad vel quibusdam. Iste laborum quis odio cupiditate? Architecto.
+    </div>
+    <div class="seccont">
+        This is second container
+    </div>
+</body>
+</html>

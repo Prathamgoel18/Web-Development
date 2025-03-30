@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width:30vw;
+            height:10vh;
+            border:2px solid black;
+            /* overflow:scroll; */
+            /* Overflow auto will help to use scroll bar if required. If overflow is required then it will use oherwise it is not used */
+            /* overflow:auto; */
+            /* Overflow is used to restrict the overflowness of the content */
+            white-space: nowrap;
+            /* White-space:nowrap isused to set all the data inn one line means no drop of data will happen */
+            text-overflow: ellipsis;
+            /* text-overflow: ellipsis is used to denote the long data in the from of ... */
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* It is also written as-;
+            overflow: hidden scroll; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium nulla temporibus vitae ad explicabo nesciunt nisi reprehenderit voluptatum eveniet veritatis, quidem ipsa consequuntur similique eligendi ducimus! Impedit in ipsum mollitia.
+    </div>
+</body>
+</html>

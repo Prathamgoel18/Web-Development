@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Specifity tells that which css will apply when multiple css is present */
+        /* Element Selector */
+        h1{
+            color:aqua;
+        }
+        /* If we use same selectorsin css then there order will become important
+        that selector which comes last will overwrite others selector and implement that selector
+        It means that selector which comes last will execute 
+        Order will matter only when same type of selectors are present */
+
+        /* When different types of selectors are present then SPECIFITY will be calculated */
+        /* Inline styling have the maximum priority */
+        /* Priority: Inline Styling>Id selector>class selector */
+
+
+
+        h1.cpurple{
+            color:purple !important;
+        }
+        /* !important is used to give most priority to the any selector */
+        /* If we use important in any selector then it will have the highest priority */
+        .cred{
+            color:red;
+        }
+        /* If multiple selectors are present then tere specifity will add */
+        /* universal selector-0
+        element selector-1
+        class selector-10
+        id selector-100
+        inine selector-1000 
+        important- 10000*/
+        /* If element selector and class selector is present in sam place then their specifity will become 1+10=11 */
+        h1.yellow{
+            color:yellow;
+        }
+        /* Here specifity is-1+10+10+10+10=41 */
+        a.harryclass.rohan-class[href]:hover{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specifity</h1>
+    </div>
+    
+</body>
+</html>

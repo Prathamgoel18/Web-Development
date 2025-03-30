@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: aqua;
+            
+        }
+        .box1{
+            color:purple;
+        }
+        /* margin is present outside of the content which is not related to the color of the content */
+        /* Padding is the innermost layer of the conten which is filled with the color of the content */
+        /* Border is the next layer of the padding in which we can choose our particular color for that region */
+        .box1{
+            color:brown;
+            /* padding: 30px; */
+            margin:30px;
+            border: 2px solid blue;
+            height: 200px;
+            /* Border-sizing:border-box is necessary to use while using height or width because if we cant use then only height of content will become 200px. */
+            /* with the help of border-sizing: border-box the sum of content,padding,border become 200. */
+            /* Margin is not included in box-sizing: border-box;  */
+            box-sizing: border-box;
+        }
+        .box2{
+            color:brown;
+            /* padding: 30px; */
+            margin:30px;
+            border: 2px solid blue;
+            height: 200px;
+            /* Border-sizing:border-box is necessary to use while using height or width because if we cant use then only height of content will become 200px. */
+            /* with the help of border-sizing: border-box the sum of content,padding,border become 200. */
+            /* Margin is not included in box-sizing: border-box;  */
+            box-sizing: border-box;
+
+        }
+        /* MARGIN COLLAPSE is the concpt in which if two margin collapse with each other then onl maximum margin will show in web page
+        EXAMPLE-I n above code margin of box1 and box2 collapse with each oher both have margin of 30px so in web page only one margin of 30px will occur 
+        If any one box have for example 35px then it means that margin of 35px will occur  */
+        *{
+            padding: 0;
+            margin:0;  
+        }
+        /* Content{sabse andar}-padding-border-margin */
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+    <div class="box box2">
+        I am another box
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DISPLAY PROPERTY</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .box{
+        border:2px solid blue;
+        display: inline;
+    }
+    .box1{
+        display: none;
+        /* display-none is used to remove all the css and html for that particular class */
+        /* display-none doesn't leave the space which is remove */
+        visibility:hidden;
+        /* Visibility:hidden is same as display none but it will leave space of that data with is removed */
+    }
+    span{
+        display: block;
+        display: inline-block;
+    }
+    /* We use inline-block when we have to set good margin padding because nline doesn't support mrgin from top of the web page  */
+    /* We can convert inline elements into block elements and block elemengts into inline elements with the help of display */
+</style>
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+    <span>I am a Good</span>
+    <span>Boy</span>
+</body>
+</html>

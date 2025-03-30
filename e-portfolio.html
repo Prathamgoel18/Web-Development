@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            background: linear-gradient(120deg, #f4f4f9, #d3d3e3);
+            color: #333;
+        }
+        header {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #c4c4d4;
+        }
+        nav {
+            background: #16213e;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #1a1a2e;
+            border-radius: 5px;
+        }
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        section h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #1a1a2e;
+            margin: 0.5rem auto 0;
+        }
+        .about, .skills, .education, .projects, .contact {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .skills ul, .education ul, .projects ul {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills ul li, .education ul li, .projects ul li {
+            flex: 1 1 calc(50% - 1rem);
+            background: #f9f9fb;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .skills ul li:hover, .education ul li:hover, .projects ul li:hover {
+            transform: translateY(-5px);
+        }
+        .contact form input, .contact form textarea, .contact form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form textarea {
+            resize: none;
+        }
+        .contact form button {
+            background: #1a1a2e;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact form button:hover {
+            background: #16213e;
+        }
+        footer {
+            background: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav a");
+            const sections = document.querySelectorAll("section");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+
+                    sections.forEach(section => section.classList.remove("active"));
+                    links.forEach(navLink => navLink.classList.remove("active"));
+
+                    const targetId = link.getAttribute("href").substring(1);
+                    document.getElementById(targetId).classList.add("active");
+                    link.classList.add("active");
+                });
+            });
+
+            // Set the first section as active by default
+            sections[0].classList.add("active");
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Pratham Goel</h1>
+        <p>Aspiring [Your Desired Role] | Passionate About [Key Interests]</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Pratham Goel, a Software Developer . With a strong passion for Python Programming, I strive to contribute effectively and efficiently in every project or task I undertake.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python,C, JavaScript</li>
+            <li>Web Development: HTML, CSS, React</li>
+            <li>Database Management: MySQL, MongoDB</li>
+            <li>Other Skills: Communication, Problem-Solving</li>
+        </ul>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>Bachelor of Technology in Information Technology, ABES Engineering College,2022-2026</li>
+            <li>Higher Secondary Education, Aadharshila 'The School', 2022</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Project Name 1</strong>: Brief description of the project. <a href="#">View Project</a>
+            </li>
+            <li>
+                <strong>Project Name 2</strong>: Brief description of the project. <a href="#">View Project</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

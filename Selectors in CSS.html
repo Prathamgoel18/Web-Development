@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{ */
+            /* background-color: red; */
+        /* } */
+        .Red{
+            background-color: red;
+        }
+        #green{
+            background-color:green;
+        }
+        /* CHILD SELECTOR */
+        /* This selector is used when we have to give css for any particular tag inside hat tag */
+        /* Child Selector is used with the help of > */
+        /* This tag will work when child is directly child to any tag */
+        /* It will not work if any other tag is used between hose two tags */
+        div > p{
+            color:blue;
+        }
+        /* Descendent Selector */
+        div p{
+            color:blue;
+        }
+        /* this tag wil work when child tag is directly or indirecly child to other tag  */
+        /* Universal Selector */
+        /* Universal selctor is used when we have to apply that CSS in all tags */
+
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* Pseudo Selector is used for links  */
+        /* a:visited is used to change css when once site is visited */
+        /* a:link is used to give css to the link */
+        /* a:visited{
+            color:green;
+        }
+        a:link{
+            color:blue;
+        } */
+        /* a:active is used to change the css when we click to any link */
+
+        /* a:active{
+            background-color:lavender;
+        } */
+        /* a:hover tag is used when we have to change the css when curson is on the link */
+        
+        a:hover{ 
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="green">
+        Heyyy!!!!How are you?
+    </div>
+    <div class="Red">
+        I am Fine.
+    </div>
+    <div>
+        <p>HEHEHEHEHEHEHE</p>
+    </div>
+    <span>
+        <p>HEHEHEHEHEHEHE</p>
+    </span>
+    <a href="https://www.google.com">Go To GOOGLE</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+
+    
+</body>
+</html>

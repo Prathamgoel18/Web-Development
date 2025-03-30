@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .box1{
+            background-color: aqua;
+            position:absolute;
+            /* position: sticky;
+            /* top:0px; */
+        }
+        .box2{
+            background-color:azure; 
+            position:relative;
+            /* Relative position will change the postion of the box according to its existiong position:;
+            we can not use top,bottom,left and right in static position so we have to change position to relative. */
+            top:34px;
+            left: 56px;
+            z-index:1;
+            /* z-index is used for taking the above box above anothor box ; */
+        }
+        .box3{
+            background-color: antiquewhite;
+            /* position:fixed;
+            bottom:0px;
+            left: 40px;
+            height:111px; */
+        }
+        .box4{
+            background-color: purple;
+        }
+        .box{
+            height:100px;
+            width:80vw;
+            padding:30px;
+            margin:3px;
+            border:2px solid black;
+        }
+        .Parent{
+            padding: 43px;
+            margin: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+
+    </div>
+    
+
+    
+</body>
+</html>

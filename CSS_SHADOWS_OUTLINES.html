@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOWS AND OUTLINES</title>
+    <style>
+        .box{
+            border:2px solid black;
+            padding:34px;
+            box-shadow: 5px 15px 5px greenyellow;
+            /* box shadow ka syntax hameshagoogle se dekhna hh uske baad usse inspect karna h */
+            outline: 2px solid green ;
+            /* There is a basic difference between outline and border. Outline is present outside than border */
+            /* Border place cant be change but the place of outline can change with the help of outline offset */
+            outline-offset: 20px;
+
+
+
+        }
+        .text-element{
+            text-shadow: 2px 2px 4px red;
+            /* ye bhi inspect karn HOGAAA isse hum shadow  ki direction,color,blurness wagera sab kuch change kar sake h */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+    <p class="text-element">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolores accusamus voluptatem quo commodi sint, ea, incidunt corrupti maxime perspiciatis ducimus. Distinctio voluptas enim praesentium quaerat laboriosam atque reprehenderit iste!
+    </p>
+</body>
+</html>
