@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            border:2px solid red;
+            display: flex;
+            height: 80vh;
+            justify-content: center;/*Justify-content is used to centre the content at center horizontally*/
+            /* align-items: center;align-items is used to centrethe content vertically */
+            flex-direction: column;
+            flex-wrap: wrap; /*flex-wrap is the property which is used when lot of data is present and that data is overflowing then with this property overflowing data will come into next lines etc.*/
+            /* align-content: center;align-content center is the property same as align items main difference is that align items used for single line and align content is used for multiple lines  */
+            flex-flow: row wrap;/*Flex flow os used to define the direction of flex and then wrap/norap simultaneously*/
+            gap:30px; /*It is used to make the gap between the content*/
+            /* row-gap: 20px;
+            column-gap: 20px;
+            gap:10px 30px  It is the short form for describing row and column gap pixels */
+        }
+        .item{
+            height:32px;
+            width:32px;
+            background-color: blueviolet;
+            border:2px solid black;
+            margin:4px;
+            /* flex-direction: column; */
+        }
+        .order1{
+            order: 1;/*Order helps to set the priority of an element if order is less then its priority will be high and will come first and elements with high order comes at last*/
+        }
+        .order2{
+            order: 2;
+        }
+        .order3{
+            order: 3;
+        }
+        .item1{
+            /* flex-grow:2; */
+            flex-shrink: 2;/*This property helps to shrink size of any element when it is required  */
+            align-self: flex-end; /*it is used to align a particular part of any element */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item order1 item1"></div>
+            <div class="item order2"></div>
+            <div class="item order3"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+    
+</body>
+</html>
