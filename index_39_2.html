@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* Grid lines are the lines which are used to seprate the grid into portions */
+        /* Grid cell is the block in the which is made with the help of grid lines */
+        /* Grid track is the area between two grid consecutive lines which contain multiple cells */
+        /* Grid Area is the area between two horizontal and 2 vertical grid lines */
+
+        .container{
+            border:2px solid black;
+            display: grid;
+            grid-template-areas:"nav nav nav"
+                               "side article article"
+                               "footer footer footer"
+            /* grid-temlate-areas is used to divise the aea in gid and give name to thhem "nav nav nav" signifies hat three areas are divided and all there names are nav */
+        }
+        .item{
+            border:2px solid red;
+            height:55px;
+            /* width:55px; */
+        }
+        .item-1{
+            grid-area:nav;
+            /* grid-area is used to provide particular area to any box or any other thing */
+        }
+        .item-2{
+           grid-area:side;
+        }
+        .item-3{
+           grid-area: article;
+        }
+        .item-4{
+           grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
